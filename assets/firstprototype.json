@@ -1,0 +1,62 @@
+[
+  {
+    "news_id": 1,
+    "post": "So, wie sie uns aus dem Norden behandeln, war es nur eine Frage der Zeit, bis das passiert.",
+    "group1_south": -5,
+    "group2_longhair": "",
+    "group3_majority": 5,
+    "group4_tea": "",
+    "group5_notdancing": "",
+    "engagement": 10
+  },
+  {
+    "news_id": 1,
+    "post": "Das lassen wir nicht auf uns sitzen! Klare Solidarität mit dem Süden! Notfalls mit Gewalt.",
+    "group1_south": 5,
+    "group2_longhair": "",
+    "group3_majority": -5,
+    "group4_tea": "",
+    "group5_notdancing": "",
+    "engagement": 10
+  },
+  {
+    "news_id": 1,
+    "post": "Wir aus dem Norden sind klar gegen Gewalt. Unser Mitgefühl geht an die Angehörigen.",
+    "group1_south": 5,
+    "group2_longhair": "",
+    "group3_majority": 5,
+    "group4_tea": "",
+    "group5_notdancing": "",
+    "engagement": 3
+  },
+  {
+    "news_id": 2,
+    "post": "lorem ip 1",
+    "group1_south": "",
+    "group2_longhair": 3,
+    "group3_majority": "",
+    "group4_tea": "",
+    "group5_notdancing": "",
+    "engagement": 4
+  },
+  {
+    "news_id": 2,
+    "post": "lorem ip 2",
+    "group1_south": "",
+    "group2_longhair": "",
+    "group3_majority": "",
+    "group4_tea": -3,
+    "group5_notdancing": "",
+    "engagement": 5
+  },
+  {
+    "news_id": 2,
+    "post": "lorem ip 3",
+    "group1_south": "",
+    "group2_longhair": "",
+    "group3_majority": "",
+    "group4_tea": "",
+    "group5_notdancing": 2,
+    "engagement": 8
+  }
+]

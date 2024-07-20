@@ -1,18 +1,35 @@
 extends Control
 
+const FILE_PATH = "res://assets/firstprototype.json"
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+var json_result
 
 
-func _on_button_pressed() -> void:
-	# Emojis / Posts werden ausgewertet, Jede Gruppe plus oder minus
-	# Globale Auswertung
-	# 
-	pass # Replace with function body.
+
+func _ready():
+	read_social_media_json()
+		
+		
+		
+func read_social_media_json() -> void:
+	# Check if the file exists
+	if not FileAccess.file_exists(FILE_PATH):
+		print("File does not exist: %s" % FILE_PATH)
+		return
+	
+	# Open the file in read mode
+	var file = FileAccess.open(FILE_PATH, FileAccess.READ)
+	
+	if file:
+		# Read the entire file as text
+		var json_content = file.get_as_text()
+		print(json_content)
+		# Close the file
+		file.close()
+
+		json_result = JSON.parse_string(json_content)
+		print(json_result[0])
+
+
+
+

@@ -23,7 +23,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 40
 
-[node name="TextEdit" type="TextEdit" parent="VBoxContainer"]
+[node name="NewsLabel" type="RichTextLabel" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 text = "Dies ist ein Newsevent..."
@@ -98,5 +98,5 @@ layout_mode = 2
 text = "12"
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]

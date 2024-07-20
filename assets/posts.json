@@ -1,0 +1,167 @@
+[
+  {
+    "news_id": 1,
+    "post": "So, wie sie uns aus dem Norden behandeln, war es nur eine Frage der Zeit, bis das passiert.",
+    "group1_south": -5,
+    "group2_longhair": "",
+    "group3_majority": 5,
+    "group4_tea": "",
+    "group5_notdancing": "",
+    "engagement": 10,
+    "rage": ""
+  },
+  {
+    "news_id": 1,
+    "post": "Das lassen wir nicht auf uns sitzen! Klare Solidarität mit dem Süden! Notfalls mit Gewalt.",
+    "group1_south": 5,
+    "group2_longhair": "",
+    "group3_majority": -5,
+    "group4_tea": "",
+    "group5_notdancing": "",
+    "engagement": 10,
+    "rage": ""
+  },
+  {
+    "news_id": 1,
+    "post": "Wir aus dem Norden sind klar gegen Gewalt. Unser Mitgefühl geht an die Angehörigen.",
+    "group1_south": 5,
+    "group2_longhair": "",
+    "group3_majority": 5,
+    "group4_tea": "",
+    "group5_notdancing": "",
+    "engagement": 3,
+    "rage": ""
+  },
+  {
+    "news_id": 2,
+    "post": "lorem ip 1",
+    "group1_south": "",
+    "group2_longhair": 3,
+    "group3_majority": "",
+    "group4_tea": "",
+    "group5_notdancing": "",
+    "engagement": 4,
+    "rage": ""
+  },
+  {
+    "news_id": 2,
+    "post": "lorem ip 2",
+    "group1_south": "",
+    "group2_longhair": "",
+    "group3_majority": "",
+    "group4_tea": -3,
+    "group5_notdancing": "",
+    "engagement": 5,
+    "rage": ""
+  },
+  {
+    "news_id": 2,
+    "post": "lorem ip 3",
+    "group1_south": "",
+    "group2_longhair": "",
+    "group3_majority": "",
+    "group4_tea": "",
+    "group5_notdancing": 2,
+    "engagement": 8,
+    "rage": ""
+  },
+  {
+    "news_id": 3,
+    "post": "Ohne Rhythmus keine Hochzeitsnacht ¯\\_(ツ)_/¯",
+    "group1_south": "",
+    "group2_longhair": "",
+    "group3_majority": "",
+    "group4_tea": "",
+    "group5_notdancing": "",
+    "engagement": "",
+    "rage": ""
+  },
+  {
+    "news_id": 3,
+    "post": "Wie kann man so oberflächlich sein?",
+    "group1_south": "",
+    "group2_longhair": "",
+    "group3_majority": "",
+    "group4_tea": "",
+    "group5_notdancing": "",
+    "engagement": "",
+    "rage": ""
+  },
+  {
+    "news_id": 3,
+    "post": "Warum hat er nicht einfach Tanzen gelernt? Er wusste doch wohl, dass der erste Tanz dazugehört?",
+    "group1_south": "",
+    "group2_longhair": "",
+    "group3_majority": "",
+    "group4_tea": "",
+    "group5_notdancing": "",
+    "engagement": "",
+    "rage": ""
+  },
+  {
+    "news_id": 4,
+    "post": "Quelle?",
+    "group1_south": "",
+    "group2_longhair": "",
+    "group3_majority": "",
+    "group4_tea": "",
+    "group5_notdancing": "",
+    "engagement": "",
+    "rage": ""
+  },
+  {
+    "news_id": 4,
+    "post": "Mal wieder typisch für die \"entspannten\" Teetrinker",
+    "group1_south": "",
+    "group2_longhair": "",
+    "group3_majority": "",
+    "group4_tea": "",
+    "group5_notdancing": "",
+    "engagement": "",
+    "rage": ""
+  },
+  {
+    "news_id": 4,
+    "post": "Haare weg von meinem Kaffee, Hippie",
+    "group1_south": "",
+    "group2_longhair": "",
+    "group3_majority": "",
+    "group4_tea": "",
+    "group5_notdancing": "",
+    "engagement": "",
+    "rage": ""
+  },
+  {
+    "news_id": 5,
+    "post": "Alle Frisuren sind okay, aber Haarnetze sollten schon Vorschrift für alle sein, einfach der Hygiene wegen",
+    "group1_south": "",
+    "group2_longhair": "",
+    "group3_majority": "",
+    "group4_tea": "",
+    "group5_notdancing": "",
+    "engagement": "",
+    "rage": ""
+  },
+  {
+    "news_id": 5,
+    "post": "Ich frage mich, wer diese Studie und die woken Medien finanziert",
+    "group1_south": "",
+    "group2_longhair": "",
+    "group3_majority": "",
+    "group4_tea": "",
+    "group5_notdancing": "",
+    "engagement": "",
+    "rage": ""
+  },
+  {
+    "news_id": 5,
+    "post": "Lol wer Suppe isst, der trinkt auch Tee",
+    "group1_south": "",
+    "group2_longhair": "",
+    "group3_majority": "",
+    "group4_tea": "",
+    "group5_notdancing": "",
+    "engagement": "",
+    "rage": ""
+  }
+]

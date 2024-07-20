@@ -12,7 +12,7 @@ var news_json_result
 @onready var button: Button = $VBoxContainer/Button
 @onready var button_2: Button = $VBoxContainer/Button2
 @onready var button_3: Button = $VBoxContainer/Button3
-@onready var text_edit: RichTextLabel = $VBoxContainer/TextEdit
+@onready var text_edit: RichTextLabel = $VBoxContainer/NewsLabel
 
 
 

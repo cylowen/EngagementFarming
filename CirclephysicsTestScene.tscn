@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2plvqofn55kd"]
+
+[ext_resource type="Script" path="res://Group.gd" id="1_5llg1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nnyce"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Group" type="RigidBody2D" parent="."]
+script = ExtResource("1_5llg1")
+
+[node name="GroupCircle" type="CollisionShape2D" parent="Group"]
+shape = SubResource("CircleShape2D_nnyce")
+
+[node name="Sprite2D" type="Sprite2D" parent="Group"]

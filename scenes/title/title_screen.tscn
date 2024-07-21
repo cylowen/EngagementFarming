@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://m7fbh3dutgl1"]
+[gd_scene load_steps=2 format=3 uid="uid://m7fbh3dutgl1"]
+
+[ext_resource type="AudioStream" uid="uid://0n5tsbr6vqrf" path="res://assets/efarm-soundtrack.ogg" id="1_60xqd"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -7,3 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_60xqd")
+autoplay = true

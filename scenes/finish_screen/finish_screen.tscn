@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cp3los1ryub4m"]
+[gd_scene load_steps=3 format=3 uid="uid://cp3los1ryub4m"]
 
 [ext_resource type="Script" path="res://scenes/finish_screen/finish_screen.gd" id="1_lcl1m"]
+[ext_resource type="AudioStream" uid="uid://0n5tsbr6vqrf" path="res://assets/efarm-soundtrack.ogg" id="2_bu4ro"]
 
 [node name="FinishScreen" type="Control"]
 layout_mode = 3
@@ -58,5 +59,9 @@ offset_bottom = -39.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Restart"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_bu4ro")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

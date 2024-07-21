@@ -26,6 +26,8 @@ func setSize(newRelSize):
 		var shape = $GroupCircle.shape
 		if shape is CircleShape2D:
 			shape.radius = originalRadius * newRelSize;
+	if $Sprite2D2:
+		$Sprite2D2.scale = Vector2(newRelSize,newRelSize)
 
 #func _input(event):
 	#if event is InputEventMouseButton:

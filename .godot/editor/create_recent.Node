@@ -1,8 +1,9 @@
 RichTextLabel
+TextureButton
+Button
+ColorRect
+TextureRect
 HBoxContainer
 Label
 TextEdit
-ColorRect
-Button
-TextureButton
 VBoxContainer

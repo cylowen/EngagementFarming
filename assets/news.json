@@ -1,22 +1,22 @@
 [
   {
-    "news_id": 1,
-    "newstext": ""
+	"news_id": 1,
+	"newstext": "blubb"
   },
   {
-    "news_id": 2,
-    "newstext": ""
+	"news_id": 2,
+	"newstext": "yay"
   },
   {
-    "news_id": 3,
-    "newstext": "Hochzeit abgesagt, weil Bräutigam nicht tanzen kann"
+	"news_id": 3,
+	"newstext": "Hochzeit abgesagt, weil Bräutigam nicht tanzen kann"
   },
   {
-    "news_id": 4,
-    "newstext": "Tee-Extremisten fordern Kaffeeverbot!"
+	"news_id": 4,
+	"newstext": "Tee-Extremisten fordern Kaffeeverbot!"
   },
   {
-    "news_id": 5,
-    "newstext": "Studie zeigt: Kurze Haare öfter in Suppe gefunden als lange Haare"
+	"news_id": 5,
+	"newstext": "Studie zeigt: Kurze Haare öfter in Suppe gefunden als lange Haare"
   }
 ]

@@ -10,9 +10,17 @@ var posts_json_result
 var news_json_result
 
 @onready var button: Button = $VBoxContainer/Button
+@onready var button_label: RichTextLabel = $VBoxContainer/Button/ButtonLabel
+
 @onready var button_2: Button = $VBoxContainer/Button2
+@onready var button_label_2: RichTextLabel = $VBoxContainer/Button2/ButtonLabel2
+
 @onready var button_3: Button = $VBoxContainer/Button3
-@onready var text_edit: RichTextLabel = $VBoxContainer/NewsLabel
+@onready var button_label_3: RichTextLabel = $VBoxContainer/Button3/ButtonLabel3
+
+@onready var news_label: RichTextLabel = $VBoxContainer/NewsLabel
+
+@onready var view_number_label: Label = $VBoxContainer/HBoxContainer2/ViewNumberLabel
 
 
 
@@ -25,11 +33,14 @@ var group5_notdancing_strength = 20
 
 var profile_engagement = 30
 
-var number_of_posts
+var number_of_news
+var current_news_id = 1
 
 
 func _ready():
 	read_social_media_json()
+	view_number_label.text = str(profile_engagement)
+
 	
 	
 func read_social_media_json() -> void:
@@ -48,12 +59,16 @@ func read_news_json() -> void:
 	if file:
 		# Read the entire file as text
 		var json_content = file.get_as_text()
-		print(json_content)
+		#print(json_content)
 		# Close the file
 		file.close()
 
 		news_json_result = JSON.parse_string(json_content)
-		print(news_json_result[3])
+		number_of_news = news_json_result.size()
+		print(number_of_news)
+		#print("news")
+		#print(news_json_result[3])
+		set_news_text()
 	
 	
 func read_posts_json() -> void:
@@ -68,21 +83,31 @@ func read_posts_json() -> void:
 	if file:
 		# Read the entire file as text
 		var json_content = file.get_as_text()
-		print(json_content)
+		#print(json_content)
 		# Close the file
 		file.close()
 
 		posts_json_result = JSON.parse_string(json_content)
-		print(posts_json_result[0])
+		#print(posts_json_result[0])
 		set_button_texts()
 		
 		
 func set_button_texts() -> void:
-	button.text = posts_json_result[0]["post"]
-	button_2.text = posts_json_result[1]["post"]
-	button_3.text = posts_json_result[2]["post"]
+	var button_number = -1
+	for item in posts_json_result:
+		if item["news_id"] == current_news_id:
+			button_number += 1
+			if button_number == 0:
+				button_label.text = item["post"]
+			if button_number == 1:
+				button_label_2.text = item["post"]
+			if button_number == 2:
+				button_label_3.text = item["post"]
+		
+	#print("Post " + str(posts_json_result[0]["post"]))
 
-
+func set_news_text() -> void:
+	news_label.text = news_json_result[current_news_id]["newstext"]
 
 func _on_button_pressed() -> void:
 	evaluate_post(0)
@@ -101,7 +126,25 @@ func evaluate_post(number_of_post) -> void:
 	# TODO times engagement factor
 	evaluate_group_strengths(number_of_post)
 	evaluate_engagement(number_of_post)
+	next_news()
 	
+func next_news() -> void:
+	current_news_id += 1
+	if current_news_id < number_of_news:
+		set_button_texts()
+		set_news_text()
+	else:
+		finish_game()
+	
+func finish_game() -> void:
+	print("game finished")
+	GameState.group1_south_strength = group1_south_strength
+	GameState.group2_longhair_strength = group2_longhair_strength
+	GameState.group3_majority_strength = group3_majority_strength
+	GameState.group4_tea_strength = group4_tea_strength
+	GameState.group5_notdancing_strength = group5_notdancing_strength
+	GameState.profile_engagement = profile_engagement
+	get_tree().change_scene_to_file("res://scenes/finish_screen/finish_screen.tscn")
 	
 func evaluate_group_strengths(number_of_post) -> void:
 	if posts_json_result[number_of_post]["group1_south"]:
@@ -138,4 +181,5 @@ func evaluate_engagement(number_of_post) -> void:
 	if engagement_change < MIN_ENGAGEMENT_THRESHOLD:
 		engagement_change = MIN_ENGAGEMENT_THRESHOLD
 	profile_engagement += engagement_change
+	view_number_label.text = str(profile_engagement)
 	print("Engagement: " + str(profile_engagement))

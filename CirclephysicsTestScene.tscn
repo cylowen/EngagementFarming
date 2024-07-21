@@ -1,11 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://d2plvqofn55kd"]
+[gd_scene load_steps=10 format=3 uid="uid://d2plvqofn55kd"]
 
 [ext_resource type="Script" path="res://Group.gd" id="1_5llg1"]
-[ext_resource type="Texture2D" uid="uid://vkmxvurm2jdp" path="res://assets/kreise/orangemitmelone.png" id="2_vm6ax"]
-[ext_resource type="Texture2D" uid="uid://c4q36sfc53bcd" path="res://assets/kreise/JCGB-yellow_S_pillShaped_btn.png" id="3_8csiy"]
-[ext_resource type="Texture2D" uid="uid://37sp12nv5ju1" path="res://assets/kreise/grünmitmelone.png" id="3_veslh"]
-[ext_resource type="Texture2D" uid="uid://b8augsy587no4" path="res://assets/kreise/purplemitmelonegroß.png" id="3_x6oo2"]
-[ext_resource type="Texture2D" uid="uid://irwe0w5i7dr2" path="res://assets/kreise/JCGB-pink_S_pillShaped_btn.png" id="5_yk8bj"]
+[ext_resource type="Texture2D" uid="uid://drag1vjwp7xhg" path="res://assets/kreise/orangemittee.png" id="2_35roe"]
+[ext_resource type="Texture2D" uid="uid://yo3gfhcskuv7" path="res://assets/kreise/orangemittanzen.png" id="3_k16m4"]
+[ext_resource type="Texture2D" uid="uid://mmq5jmgmh088" path="res://assets/kreise/blaumittempel.png" id="4_h6kio"]
+[ext_resource type="Texture2D" uid="uid://bckuuwlb7fvn" path="res://assets/kreise/JCGB-green_S_pillShaped_btn.png" id="6_2cmul"]
+[ext_resource type="Texture2D" uid="uid://ddhs42b7pkqnh" path="res://assets/kreise/purplemitschere.png" id="6_juhau"]
+[ext_resource type="Texture2D" uid="uid://bxdysncm2q84e" path="res://assets/kreise/southarrow.png" id="7_66d40"]
+[ext_resource type="Script" path="res://Sprite2D2.gd" id="8_amyyx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nnyce"]
 radius = 58.0345
@@ -22,7 +24,7 @@ shape = SubResource("CircleShape2D_nnyce")
 
 [node name="Sprite2D" type="Sprite2D" parent="Group"]
 position = Vector2(1, 0)
-texture = ExtResource("2_vm6ax")
+texture = ExtResource("2_35roe")
 
 [node name="Group2" type="RigidBody2D" parent="."]
 position = Vector2(344, 867)
@@ -34,7 +36,7 @@ shape = SubResource("CircleShape2D_nnyce")
 
 [node name="Sprite2D" type="Sprite2D" parent="Group2"]
 position = Vector2(6, 1)
-texture = ExtResource("3_8csiy")
+texture = ExtResource("3_k16m4")
 
 [node name="Group3" type="RigidBody2D" parent="."]
 position = Vector2(268, 752)
@@ -46,7 +48,7 @@ shape = SubResource("CircleShape2D_nnyce")
 
 [node name="Sprite2D" type="Sprite2D" parent="Group3"]
 position = Vector2(3, 2)
-texture = ExtResource("3_x6oo2")
+texture = ExtResource("4_h6kio")
 
 [node name="Group4" type="RigidBody2D" parent="."]
 position = Vector2(196, 875)
@@ -59,7 +61,12 @@ shape = SubResource("CircleShape2D_nnyce")
 
 [node name="Sprite2D" type="Sprite2D" parent="Group4"]
 position = Vector2(0, 2)
-texture = ExtResource("5_yk8bj")
+texture = ExtResource("6_2cmul")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Group4"]
+position = Vector2(0, 6)
+texture = ExtResource("7_66d40")
+script = ExtResource("8_amyyx")
 
 [node name="Group5" type="RigidBody2D" parent="."]
 position = Vector2(156, 747)
@@ -71,7 +78,7 @@ shape = SubResource("CircleShape2D_nnyce")
 
 [node name="Sprite2D" type="Sprite2D" parent="Group5"]
 position = Vector2(-10, -1)
-texture = ExtResource("3_veslh")
+texture = ExtResource("6_juhau")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(-20, -12)
@@ -79,4 +86,4 @@ position = Vector2(-20, -12)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(11.8983, 0)
 scale = Vector2(1.04111, 1)
-polygon = PackedVector2Array(533, 1013, 530, 1018, 528.378, 537, 398.709, 949, 144.174, 949, -2.78383, 551, 2, 1079, 532, 1082)
+polygon = PackedVector2Array(533, 1013, 530, 1018, 528.378, 537, 381.421, 954, 158.582, 950, -2.78383, 551, 2, 1079, 532, 1082)

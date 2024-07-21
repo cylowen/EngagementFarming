@@ -2,3 +2,5 @@ res://CirclephysicsTestScene.tscn
 res://scenes/title/title_screen.tscn
 res://scenes/game/game.tscn
 res://Group.gd
+res://rotatesouth.gd
+res://Sprite2D2.gd

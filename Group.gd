@@ -4,6 +4,7 @@ extends RigidBody2D
 @onready var shape: CollisionShape2D = $GroupCircle
 var originalRadius
 var originalpoints
+var sizemult=1.1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if shape:
@@ -18,11 +19,15 @@ func _process(delta):
 	pass
 
 #verändert die size multiplikativ im format x*1.05
-func setSize(newPoints):
-	var newSize:float = newPoints / originalpoints
+func setSize(newRelSize):
 	if $Sprite2D:
-		$Sprite2D.scale = Vector2(newSize,newSize);
+		$Sprite2D.scale = Vector2(newRelSize,newRelSize);
 	if $GroupCircle:
 		var shape = $GroupCircle.shape
 		if shape is CircleShape2D:
-			shape.radius *= newSize;
+			shape.radius = originalRadius * newRelSize;
+
+func _input(event):
+	if event is InputEventMouseButton:
+		setSize(sizemult)
+		sizemult+=0.1

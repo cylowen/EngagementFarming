@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://d4m5k3orrstal"]
 
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_rtlvu"]
-[ext_resource type="PackedScene" uid="uid://d2plvqofn55kd" path="res://scenes/CirclephysicsTestScene.tscn" id="2_5jk4x"]
-[ext_resource type="AudioStream" uid="uid://0n5tsbr6vqrf" path="res://assets/efarm-soundtrack.ogg" id="3_xibc5"]
+[ext_resource type="PackedScene" uid="uid://bxkbj1whglva0" path="res://scenes/CirclephysicsTestScene.tscn" id="2_5jk4x"]
+[ext_resource type="AudioStream" path="res://assets/efarm-soundtrack.ogg" id="3_xibc5"]
 
 [node name="Game" type="Control"]
 layout_mode = 3

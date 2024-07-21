@@ -1,9 +1,7 @@
-res://scenes/game/game.tscn
-res://scenes/CirclephysicsTestScene.tscn
 res://scenes/title/title_screen.tscn
+res://scenes/game/game.tscn
 res://scenes/finish_screen/finish_screen.tscn
 res://scenes/start_screen/start_screen.tscn
-res://scenes/game/game.gd
-res://CirclephysicsTestScene.tscn
+res://scenes/CirclephysicsTestScene.tscn
+res://scenes/Sprite2D2.gd
 res://scenes/Group.gd
-res://assets/posts.json

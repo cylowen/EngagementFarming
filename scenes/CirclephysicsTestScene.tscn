@@ -1,12 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://d2plvqofn55kd"]
+[gd_scene load_steps=10 format=3 uid="uid://bxkbj1whglva0"]
 
 [ext_resource type="Script" path="res://scenes/Group.gd" id="1_5llg1"]
 [ext_resource type="Texture2D" uid="uid://drag1vjwp7xhg" path="res://assets/kreise/orangemittee.png" id="2_35roe"]
 [ext_resource type="Texture2D" uid="uid://byt1hmbynl1pw" path="res://assets/kreise/gelbmittanzen.png" id="3_k16m4"]
 [ext_resource type="Texture2D" uid="uid://mmq5jmgmh088" path="res://assets/kreise/blaumittempel.png" id="4_h6kio"]
 [ext_resource type="Texture2D" uid="uid://bckuuwlb7fvn" path="res://assets/kreise/JCGB-green_S_pillShaped_btn.png" id="6_2cmul"]
+[ext_resource type="Texture2D" uid="uid://de3ll38twf7vt" path="res://assets/kreise/süden.png" id="6_858ri"]
 [ext_resource type="Texture2D" uid="uid://ddhs42b7pkqnh" path="res://assets/kreise/purplemitschere.png" id="6_juhau"]
-[ext_resource type="Texture2D" uid="uid://bxdysncm2q84e" path="res://assets/kreise/southarrow.png" id="7_66d40"]
 [ext_resource type="Script" path="res://scenes/Sprite2D2.gd" id="8_amyyx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nnyce"]
@@ -64,8 +64,8 @@ position = Vector2(0, 2)
 texture = ExtResource("6_2cmul")
 
 [node name="Sprite2D2" type="Sprite2D" parent="Group4"]
-position = Vector2(0, 6)
-texture = ExtResource("7_66d40")
+position = Vector2(7, 5)
+texture = ExtResource("6_858ri")
 script = ExtResource("8_amyyx")
 
 [node name="Group5" type="RigidBody2D" parent="."]

@@ -9,5 +9,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var parentRotation = group_circle.rotation
+	var parentRotation = get_parent().rotation
+	print(parentRotation)
 	rotation = -parentRotation

@@ -12,4 +12,5 @@ grow_vertical = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_60xqd")
+volume_db = -5.0
 autoplay = true

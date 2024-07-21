@@ -7,6 +7,7 @@ const MAJORITY_STRENGTH_START = 80
 const TEA_STRENGTH_START = 20
 const NOTDANCING_START = 20
 const PROFILE_ENGAGEMENT_START = 30
+const RAGE_LEVEL_START = 0
 
 var group1_south_strength = 0
 var group2_longhair_strength = 0
@@ -15,16 +16,16 @@ var group4_tea_strength = 0
 var group5_notdancing_strength = 0
 
 var profile_engagement = 0
+var rage_level = 0
 
 
 func _ready() -> void:
+	reset_game_state()
+
+func reset_game_state() -> void:
 	group1_south_strength = SOUTH_STRENGTH_START
 	group2_longhair_strength = LONGHAIR_STRENGTH_START
 	group3_majority_strength = MAJORITY_STRENGTH_START
 	group4_tea_strength = TEA_STRENGTH_START
 	group5_notdancing_strength =NOTDANCING_START
 	profile_engagement = PROFILE_ENGAGEMENT_START
-
-func reset_game_state() -> void:
-	#TODO
-	pass

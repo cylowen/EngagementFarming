@@ -7,3 +7,5 @@ res://scenes/game/game.gd
 res://CirclephysicsTestScene.tscn
 res://scenes/Group.gd
 res://assets/posts.json
+res://scenes/finish_screen/finish_screen.gd
+res://singletons/game_state.gd

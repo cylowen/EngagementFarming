@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d4m5k3orrstal"]
+[gd_scene load_steps=5 format=3 uid="uid://d4m5k3orrstal"]
 
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_rtlvu"]
 [ext_resource type="PackedScene" uid="uid://d2plvqofn55kd" path="res://scenes/CirclephysicsTestScene.tscn" id="2_5jk4x"]
 [ext_resource type="AudioStream" uid="uid://0n5tsbr6vqrf" path="res://assets/efarm-soundtrack.ogg" id="3_xibc5"]
+[ext_resource type="AudioStream" uid="uid://bg0x65k7mvei" path="res://assets/plop.ogg" id="4_pih6w"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -119,7 +120,11 @@ position = Vector2(-45, -893)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_xibc5")
+volume_db = -5.0
 autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_pih6w")
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

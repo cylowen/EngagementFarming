@@ -27,7 +27,7 @@ func setSize(newRelSize):
 		if shape is CircleShape2D:
 			shape.radius = originalRadius * newRelSize;
 
-func _input(event):
-	if event is InputEventMouseButton:
-		setSize(sizemult)
-		sizemult+=0.1
+#func _input(event):
+	#if event is InputEventMouseButton:
+	#	setSize(sizemult)
+	#	sizemult+=0.1

@@ -24,6 +24,9 @@ var news_json_result
 @onready var view_number_label: Label = $VBoxContainer/HBoxContainer2/ViewNumberLabel
 @onready var node_2d: Node2D = $HBoxContainer/Node2D
 
+@onready var audio_stream_player_2: AudioStreamPlayer = $AudioStreamPlayer2
+
+
 
 var number_of_news
 var current_news_id = 1
@@ -112,14 +115,20 @@ func set_news_text() -> void:
 
 func _on_button_pressed() -> void:
 	evaluate_post(0)
+	if audio_stream_player_2:
+		audio_stream_player_2.play()
 
 
 func _on_button_2_pressed() -> void:
 	evaluate_post(1)
+	if audio_stream_player_2:
+		audio_stream_player_2.play()
 
 
 func _on_button_3_pressed() -> void:
 	evaluate_post(2)
+	if audio_stream_player_2:
+		audio_stream_player_2.play()
 
 func evaluate_post(number_of_post) -> void:
 	print(number_of_post)
@@ -143,7 +152,7 @@ func next_news() -> void:
 	
 func finish_game() -> void:
 	print("game finished")
-
+	GameState.reset_game_state()
 	get_tree().change_scene_to_file("res://scenes/finish_screen/finish_screen.tscn")
 	
 func evaluate_group_strengths(number_of_post) -> void:
@@ -187,6 +196,8 @@ func evaluate_engagement(number_of_post) -> void:
 		engagement_change += posts_json_result[number_of_post]["group5_notdancing"] * GameState.group5_notdancing_strength
 	if engagement_change < MIN_ENGAGEMENT_THRESHOLD:
 		engagement_change = MIN_ENGAGEMENT_THRESHOLD
+	if posts_json_result[number_of_post]["rage"]:
+		GameState.rage_level += posts_json_result[number_of_post]["rage"]
 	GameState.profile_engagement += engagement_change
 	view_number_label.text = str(GameState.profile_engagement)
 	print("Engagement: " + str(GameState.profile_engagement))

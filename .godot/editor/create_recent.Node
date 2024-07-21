@@ -1,5 +1,6 @@
 AudioStreamPlayer
 RichTextLabel
+VBoxContainer
 TextureButton
 Button
 ColorRect
@@ -7,4 +8,3 @@ TextureRect
 HBoxContainer
 Label
 TextEdit
-VBoxContainer

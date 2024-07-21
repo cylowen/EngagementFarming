@@ -120,7 +120,6 @@ func _on_button_3_pressed() -> void:
 
 func evaluate_post(number_of_post) -> void:
 	print(number_of_post)
-	# make groups stronger / weaker
 	# TODO times engagement factor
 	evaluate_group_strengths(number_of_post)
 	evaluate_engagement(number_of_post)

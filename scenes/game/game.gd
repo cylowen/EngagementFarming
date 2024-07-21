@@ -177,7 +177,7 @@ func evaluate_group_strengths(number_of_post) -> void:
 	$HBoxContainer/Node2D/Group3.setSize(GameState.group3_majority_strength / GameState.MAJORITY_STRENGTH_START)
 	$HBoxContainer/Node2D/Group4.setSize(GameState.group4_tea_strength / GameState.TEA_STRENGTH_START)
 	$HBoxContainer/Node2D/Group5.setSize(GameState.group5_notdancing_strength / GameState.NOTDANCING_START)
-	sizemult+=0.05
+	#sizemult+=0.05
 
 
 func evaluate_engagement(number_of_post) -> void:

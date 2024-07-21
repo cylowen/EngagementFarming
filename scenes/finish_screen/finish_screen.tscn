@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cp3los1ryub4m"]
 
 [ext_resource type="Script" path="res://scenes/finish_screen/finish_screen.gd" id="1_lcl1m"]
-[ext_resource type="AudioStream" uid="uid://0n5tsbr6vqrf" path="res://assets/efarm-soundtrack.ogg" id="2_bu4ro"]
-[ext_resource type="AudioStream" uid="uid://bgrkp8gx13qyq" path="res://assets/success.ogg" id="3_n852o"]
+[ext_resource type="AudioStream" path="res://assets/efarm-soundtrack.ogg" id="2_bu4ro"]
+[ext_resource type="AudioStream" path="res://assets/success.ogg" id="3_n852o"]
 
 [node name="FinishScreen" type="Control"]
 layout_mode = 3

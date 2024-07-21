@@ -23,7 +23,6 @@ var news_json_result
 @onready var view_number_label: Label = $VBoxContainer/HBoxContainer2/ViewNumberLabel
 
 
-
 #group strength
 var group1_south_strength = 20
 var group2_longhair_strength = 20
@@ -40,7 +39,6 @@ var current_news_id = 1
 func _ready():
 	read_social_media_json()
 	view_number_label.text = str(profile_engagement)
-
 	
 	
 func read_social_media_json() -> void:
@@ -138,30 +136,30 @@ func next_news() -> void:
 	
 func finish_game() -> void:
 	print("game finished")
-	GameState.group1_south_strength = group1_south_strength
-	GameState.group2_longhair_strength = group2_longhair_strength
-	GameState.group3_majority_strength = group3_majority_strength
-	GameState.group4_tea_strength = group4_tea_strength
-	GameState.group5_notdancing_strength = group5_notdancing_strength
-	GameState.profile_engagement = profile_engagement
+	#GameState.group1_south_strength = group1_south_strength
+	#GameState.group2_longhair_strength = group2_longhair_strength
+	#GameState.group3_majority_strength = group3_majority_strength
+	#GameState.group4_tea_strength = group4_tea_strength
+	#GameState.group5_notdancing_strength = group5_notdancing_strength
+	#GameState.profile_engagement = profile_engagement
 	get_tree().change_scene_to_file("res://scenes/finish_screen/finish_screen.tscn")
 	
 func evaluate_group_strengths(number_of_post) -> void:
 	if posts_json_result[number_of_post]["group1_south"]:
-		group1_south_strength += posts_json_result[number_of_post]["group1_south"]
+		GameState.group1_south_strength += posts_json_result[number_of_post]["group1_south"]
 	if posts_json_result[number_of_post]["group2_longhair"]:
-		group2_longhair_strength += posts_json_result[number_of_post]["group2_longhair"]
+		GameState.group2_longhair_strength += posts_json_result[number_of_post]["group2_longhair"]
 	if posts_json_result[number_of_post]["group3_majority"]:
-		group3_majority_strength += posts_json_result[number_of_post]["group3_majority"]
+		GameState.group3_majority_strength += posts_json_result[number_of_post]["group3_majority"]
 	if posts_json_result[number_of_post]["group4_tea"]:
-		group4_tea_strength += posts_json_result[number_of_post]["group4_tea"]
+		GameState.group4_tea_strength += posts_json_result[number_of_post]["group4_tea"]
 	if posts_json_result[number_of_post]["group5_notdancing"]:
-		group5_notdancing_strength += posts_json_result[number_of_post]["group5_notdancing"]
-	print("Group1: " + str(group1_south_strength))
-	print("Group2: " + str(group2_longhair_strength))
-	print("Group3: " + str(group3_majority_strength))
-	print("Group4: " + str(group4_tea_strength))
-	print("Group5: " + str(group5_notdancing_strength))
+		GameState.group5_notdancing_strength += posts_json_result[number_of_post]["group5_notdancing"]
+	print("Group1: " + str(GameState.group1_south_strength))
+	print("Group2: " + str(GameState.group2_longhair_strength))
+	print("Group3: " + str(GameState.group3_majority_strength))
+	print("Group4: " + str(GameState.group4_tea_strength))
+	print("Group5: " + str(GameState.group5_notdancing_strength))
 
 
 func evaluate_engagement(number_of_post) -> void:
@@ -180,6 +178,6 @@ func evaluate_engagement(number_of_post) -> void:
 		engagement_change += posts_json_result[number_of_post]["group5_notdancing"] * group5_notdancing_strength
 	if engagement_change < MIN_ENGAGEMENT_THRESHOLD:
 		engagement_change = MIN_ENGAGEMENT_THRESHOLD
-	profile_engagement += engagement_change
-	view_number_label.text = str(profile_engagement)
-	print("Engagement: " + str(profile_engagement))
+	GameState.profile_engagement += engagement_change
+	view_number_label.text = str(GameState.profile_engagement)
+	print("Engagement: " + str(GameState.profile_engagement))

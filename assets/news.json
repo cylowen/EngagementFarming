@@ -1,22 +1,70 @@
 [
   {
-	"news_id": 1,
-	"newstext": "blubb"
+    "news_id": 1,
+    "newstext": "Auf ein*e führende Polotiker*in aus dem Süden wurde ein Attentat verübt."
   },
   {
-	"news_id": 2,
-	"newstext": "yay"
+    "news_id": 2,
+    "newstext": "Kaffeetrinker haben echt keine Kultur."
   },
   {
-	"news_id": 3,
-	"newstext": "Hochzeit abgesagt, weil Bräutigam nicht tanzen kann"
+    "news_id": 3,
+    "newstext": "Hochzeit abgesagt, weil Bräutigam nicht tanzen kann"
   },
   {
-	"news_id": 4,
-	"newstext": "Tee-Extremisten fordern Kaffeeverbot!"
+    "news_id": 4,
+    "newstext": "Tee-Extremisten fordern Kaffeeverbot!"
   },
   {
-	"news_id": 5,
-	"newstext": "Studie zeigt: Kurze Haare öfter in Suppe gefunden als lange Haare"
+    "news_id": 5,
+    "newstext": "Studie zeigt: Kurze Haare öfter in Suppe gefunden als lange Haare"
+  },
+  {
+    "news_id": 6,
+    "newstext": "Gemeinderatssitzung: Entscheidung für einen Coffee-Shop oder einen Teeladen?"
+  },
+  {
+    "news_id": 7,
+    "newstext": "In 2 Monaten heirate ich. Soll ich meine langen Haare abschneiden oder behalten?"
+  },
+  {
+    "news_id": 8,
+    "newstext": "Anlässlich eines Bundesligaspiels bin ich letzte Woche mit dem Zug einmal quer durch Deutschland gefahren. Welchen Eindruck habt ihr von Deutschland?"
+  },
+  {
+    "news_id": 9,
+    "newstext": "Morgens gehe ich vor der Arbeit mit noch fast geschlossenen Augen in die Küche. Wie schafft ihr es, wach zu werden?"
+  },
+  {
+    "news_id": 10,
+    "newstext": "In einer Woche eröffnet das neue Tanzstudio."
+  },
+  {
+    "news_id": 11,
+    "newstext": "Empörung über regionale Ungleichverteilung von Geldern"
+  },
+  {
+    "news_id": 12,
+    "newstext": "Der Let’s-Dance-Finalistenpaar steht nach 3 langen Monaten endlich fest."
+  },
+  {
+    "news_id": 13,
+    "newstext": "Im europaweiten Ranking liegt Deutschland beim Thema Tourismus an 8. Stelle."
+  },
+  {
+    "news_id": 14,
+    "newstext": "Umfrage: Friseur zu teuer?"
+  },
+  {
+    "news_id": 15,
+    "newstext": "Bevor ich tanzen gehe, brauche ich immer mein Red Bull!"
+  },
+  {
+    "news_id": 16,
+    "newstext": "Ich überlege, nach Deutschland zu ziehen. Wie aufregend ist es, in Deutschland zu leben?"
+  },
+  {
+    "news_id": 17,
+    "newstext": "Ich habe mich zu einem Tanzkurs angemeldet."
   }
 ]

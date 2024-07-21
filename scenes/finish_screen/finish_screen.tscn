@@ -36,17 +36,10 @@ grow_vertical = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "You finished the game!
 
-You gained a little / a lot / a medium amount of popularity and engageged in a ltttle / a lot / a medium amount of hate. Are you happy with yourself?
+You gained a little / a lot / a medium amount of popularity and engageged in a ltttle / a lot / a medium amount of hate. 
 
-You strengthened / weakened the long hair community by x points.
+Bist du zufrieden mit dir?
 
-You strengthened / weakened the long hair community by x points.
-
-You strengthened / weakened the long hair community by x points.
-
-You strengthened / weakened the long hair community by x points.
-
-You strengthened / weakened the long hair community by x points.
 
 "
 fit_content = true

@@ -2,6 +2,7 @@ extends Control
 
 const POSTS_FILE_PATH = "res://assets/posts.json"
 const NEWS_FILE_PATH = "res://assets/news.json"
+const MAX_NUMBER_OF_NEWS = 10
 
 const ENGAGEMENT_NUMBER = 5
 const MIN_ENGAGEMENT_THRESHOLD = 20
@@ -23,22 +24,19 @@ var news_json_result
 @onready var view_number_label: Label = $VBoxContainer/HBoxContainer2/ViewNumberLabel
 
 
-#group strength
-var group1_south_strength = 20
-var group2_longhair_strength = 20
-var group3_majority_strength = 80
-var group4_tea_strength = 20
-var group5_notdancing_strength = 20
-
-var profile_engagement = 30
-
 var number_of_news
 var current_news_id = 1
 
+var news_array = []
+
+var rng
+var news_counter = 0
 
 func _ready():
 	read_social_media_json()
-	view_number_label.text = str(profile_engagement)
+	rng = RandomNumberGenerator.new()
+	rng.randomize()
+	view_number_label.text = str(GameState.profile_engagement)
 	
 	
 func read_social_media_json() -> void:
@@ -64,6 +62,8 @@ func read_news_json() -> void:
 		news_json_result = JSON.parse_string(json_content)
 		number_of_news = news_json_result.size()
 		print(number_of_news)
+		for i in range(number_of_news):
+			news_array.append(i+1)
 		#print("news")
 		#print(news_json_result[3])
 		set_news_text()
@@ -105,7 +105,7 @@ func set_button_texts() -> void:
 	#print("Post " + str(posts_json_result[0]["post"]))
 
 func set_news_text() -> void:
-	news_label.text = news_json_result[current_news_id]["newstext"]
+	news_label.text = news_json_result[current_news_id-1]["newstext"]
 
 func _on_button_pressed() -> void:
 	evaluate_post(0)
@@ -127,8 +127,13 @@ func evaluate_post(number_of_post) -> void:
 	next_news()
 	
 func next_news() -> void:
-	current_news_id += 1
-	if current_news_id < number_of_news:
+	#current_news_id += 1
+	news_counter += 1
+	var random_int = rng.randi_range(0, news_array.size()-1)
+	current_news_id = news_array[random_int]
+	news_array.remove_at(random_int)
+	
+	if news_counter < MAX_NUMBER_OF_NEWS:
 		set_button_texts()
 		set_news_text()
 	else:
@@ -136,12 +141,7 @@ func next_news() -> void:
 	
 func finish_game() -> void:
 	print("game finished")
-	#GameState.group1_south_strength = group1_south_strength
-	#GameState.group2_longhair_strength = group2_longhair_strength
-	#GameState.group3_majority_strength = group3_majority_strength
-	#GameState.group4_tea_strength = group4_tea_strength
-	#GameState.group5_notdancing_strength = group5_notdancing_strength
-	#GameState.profile_engagement = profile_engagement
+
 	get_tree().change_scene_to_file("res://scenes/finish_screen/finish_screen.tscn")
 	
 func evaluate_group_strengths(number_of_post) -> void:
@@ -167,15 +167,15 @@ func evaluate_engagement(number_of_post) -> void:
 	if posts_json_result[number_of_post]["engagement"]:
 		engagement_change += posts_json_result[number_of_post]["engagement"] 
 	if posts_json_result[number_of_post]["group1_south"]:
-		engagement_change += posts_json_result[number_of_post]["group1_south"] * group1_south_strength
+		engagement_change += posts_json_result[number_of_post]["group1_south"] * GameState.group1_south_strength
 	if posts_json_result[number_of_post]["group2_longhair"]:
-		engagement_change += posts_json_result[number_of_post]["group2_longhair"] * group2_longhair_strength
+		engagement_change += posts_json_result[number_of_post]["group2_longhair"] * GameState.group2_longhair_strength
 	if posts_json_result[number_of_post]["group3_majority"]:
-		engagement_change += posts_json_result[number_of_post]["group3_majority"] * group3_majority_strength
+		engagement_change += posts_json_result[number_of_post]["group3_majority"] * GameState.group3_majority_strength
 	if posts_json_result[number_of_post]["group4_tea"]:
-		engagement_change += posts_json_result[number_of_post]["group4_tea"] * group4_tea_strength
+		engagement_change += posts_json_result[number_of_post]["group4_tea"] * GameState.group4_tea_strength
 	if posts_json_result[number_of_post]["group5_notdancing"]:
-		engagement_change += posts_json_result[number_of_post]["group5_notdancing"] * group5_notdancing_strength
+		engagement_change += posts_json_result[number_of_post]["group5_notdancing"] * GameState.group5_notdancing_strength
 	if engagement_change < MIN_ENGAGEMENT_THRESHOLD:
 		engagement_change = MIN_ENGAGEMENT_THRESHOLD
 	GameState.profile_engagement += engagement_change

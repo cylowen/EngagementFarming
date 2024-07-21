@@ -24,3 +24,7 @@ func _ready() -> void:
 	group4_tea_strength = TEA_STRENGTH_START
 	group5_notdancing_strength =NOTDANCING_START
 	profile_engagement = PROFILE_ENGAGEMENT_START
+
+func reset_game_state() -> void:
+	#TODO
+	pass

@@ -34,7 +34,7 @@ offset_bottom = 23.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-text = "You finished the game!
+text = "Du hast das Spiel beendet.
 
 You gained a little / a lot / a medium amount of popularity and engageged in a ltttle / a lot / a medium amount of hate. 
 

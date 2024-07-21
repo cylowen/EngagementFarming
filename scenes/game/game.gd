@@ -163,11 +163,11 @@ func evaluate_group_strengths(number_of_post) -> void:
 	print("Group4: " + str(GameState.group4_tea_strength))
 	print("Group5: " + str(GameState.group5_notdancing_strength))
 	#Node2D.set_size(sizemult)
-	$HBoxContainer/Node2D/Group.setSize(GameState.group1_south_strength)
-	$HBoxContainer/Node2D/Group2.setSize(GameState.group2_longhair_strength)
-	$HBoxContainer/Node2D/Group3.setSize(GameState.group3_majority_strength)
-	$HBoxContainer/Node2D/Group4.setSize(GameState.group4_tea_strength)
-	$HBoxContainer/Node2D/Group5.setSize(GameState.group5_notdancing_strength)
+	$HBoxContainer/Node2D/Group.setSize(GameState.group1_south_strength / GameState.SOUTH_STRENGTH_START)
+	$HBoxContainer/Node2D/Group2.setSize(GameState.group2_longhair_strength / GameState.LONGHAIR_STRENGTH_START)
+	$HBoxContainer/Node2D/Group3.setSize(GameState.group3_majority_strength / GameState.MAJORITY_STRENGTH_START)
+	$HBoxContainer/Node2D/Group4.setSize(GameState.group4_tea_strength / GameState.TEA_STRENGTH_START)
+	$HBoxContainer/Node2D/Group5.setSize(GameState.group5_notdancing_strength / GameState.NOTDANCING_START)
 	sizemult+=0.05
 
 

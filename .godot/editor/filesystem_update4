@@ -1,5 +1,4 @@
-res://scenes/game/game.gd
-res://Group.gd
 res://CirclephysicsTestScene.tscn
-res://scenes/game/game.tscn
 res://scenes/title/title_screen.tscn
+res://scenes/game/game.tscn
+res://Group.gd

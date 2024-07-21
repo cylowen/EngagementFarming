@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d4m5k3orrstal"]
+[gd_scene load_steps=3 format=3 uid="uid://d4m5k3orrstal"]
 
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_rtlvu"]
+[ext_resource type="PackedScene" uid="uid://d2plvqofn55kd" path="res://scenes/CirclephysicsTestScene.tscn" id="2_5jk4x"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -111,31 +112,12 @@ grow_vertical = 0
 size_flags_vertical = 8
 theme_override_constants/separation = 50
 
-[node name="ColorRect" type="ColorRect" parent="HBoxContainer"]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-color = Color(0.356863, 0.239216, 1, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="HBoxContainer"]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-color = Color(0.674659, 0.211513, 0.532674, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="HBoxContainer"]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-color = Color(0.668058, 0.296282, 0.19046, 1)
-
-[node name="ColorRect4" type="ColorRect" parent="HBoxContainer"]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-color = Color(0.298806, 0.480483, 0.235794, 1)
-
-[node name="ColorRect5" type="ColorRect" parent="HBoxContainer"]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-color = Color(0.705882, 0.580392, 0.345098, 1)
+[node name="Node2D" parent="HBoxContainer" instance=ExtResource("2_5jk4x")]
+z_index = -5
+position = Vector2(-45, -893)
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
+
+[editable path="HBoxContainer/Node2D"]

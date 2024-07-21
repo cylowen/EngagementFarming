@@ -22,6 +22,7 @@ var news_json_result
 @onready var news_label: RichTextLabel = $VBoxContainer/NewsLabel
 
 @onready var view_number_label: Label = $VBoxContainer/HBoxContainer2/ViewNumberLabel
+@onready var node_2d: Node2D = $HBoxContainer/Node2D
 
 
 var number_of_news
@@ -31,17 +32,19 @@ var news_array = []
 
 var rng
 var news_counter = 0
+var sizemult=1.1
 
 func _ready():
-	read_social_media_json()
 	rng = RandomNumberGenerator.new()
 	rng.randomize()
 	view_number_label.text = str(GameState.profile_engagement)
+	read_social_media_json()
 	
 	
 func read_social_media_json() -> void:
 	read_news_json()
 	read_posts_json()
+	next_news()
 	
 	
 func read_news_json() -> void:
@@ -66,7 +69,7 @@ func read_news_json() -> void:
 			news_array.append(i+1)
 		#print("news")
 		#print(news_json_result[3])
-		set_news_text()
+		#set_news_text()
 	
 	
 func read_posts_json() -> void:
@@ -87,7 +90,7 @@ func read_posts_json() -> void:
 
 		posts_json_result = JSON.parse_string(json_content)
 		#print(posts_json_result[0])
-		set_button_texts()
+		#set_button_texts()
 		
 		
 func set_button_texts() -> void:
@@ -159,6 +162,13 @@ func evaluate_group_strengths(number_of_post) -> void:
 	print("Group3: " + str(GameState.group3_majority_strength))
 	print("Group4: " + str(GameState.group4_tea_strength))
 	print("Group5: " + str(GameState.group5_notdancing_strength))
+	#Node2D.set_size(sizemult)
+	$HBoxContainer/Node2D/Group.setSize(GameState.group1_south_strength)
+	$HBoxContainer/Node2D/Group2.setSize(GameState.group2_longhair_strength)
+	$HBoxContainer/Node2D/Group3.setSize(GameState.group3_majority_strength)
+	$HBoxContainer/Node2D/Group4.setSize(GameState.group4_tea_strength)
+	$HBoxContainer/Node2D/Group5.setSize(GameState.group5_notdancing_strength)
+	sizemult+=0.05
 
 
 func evaluate_engagement(number_of_post) -> void:

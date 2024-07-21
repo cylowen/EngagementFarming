@@ -30,6 +30,6 @@ func setSize(newRelSize):
 		$Sprite2D2.scale = Vector2(newRelSize,newRelSize)
 
 func _input(event):
-	if event is InputEventMouseButton:
+	##if event is InputEventMouseButton:
 		#setSize(sizemult)
 		#sizemult+=0.1

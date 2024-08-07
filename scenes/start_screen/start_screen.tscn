@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=3 uid="uid://cphttqakul3vn"]
+
+[ext_resource type="Script" path="res://scenes/start_screen/start_screen.gd" id="1_5tolw"]
+[ext_resource type="FontFile" uid="uid://c1ymcbxgr5wbw" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="2_imk2v"]
+[ext_resource type="LabelSettings" uid="uid://sybfd280nrol" path="res://assets/title.tres" id="3_ay5hx"]
+
+[sub_resource type="Gradient" id="Gradient_q2ikp"]
+offsets = PackedFloat32Array(0.0075, 1)
+colors = PackedColorArray(0.313726, 0.313726, 0.313726, 1, 0.314316, 0.314316, 0.314316, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2bf8a"]
+gradient = SubResource("Gradient_q2ikp")
+
+[node name="StartScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5tolw")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_2bf8a")
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 66.0
+offset_right = 150.0
+offset_bottom = 166.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_imk2v")
+theme_override_font_sizes/font_size = 40
+text = "Start"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -188.0
+offset_top = -232.5
+offset_right = 188.0
+offset_bottom = -107.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Engagement
+Farming"
+label_settings = ExtResource("3_ay5hx")
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Werde der*die nächste Polit-Influencer*in"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

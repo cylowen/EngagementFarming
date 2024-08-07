@@ -1,5 +1,12 @@
-res://scenes/game/game.gd
-res://Group.gd
-res://CirclephysicsTestScene.tscn
-res://scenes/game/game.tscn
 res://scenes/title/title_screen.tscn
+res://scenes/game/game.tscn
+res://scenes/finish_screen/finish_screen.tscn
+res://scenes/start_screen/start_screen.tscn
+res://scenes/CirclephysicsTestScene.tscn
+res://scenes/Group.gd
+res://scenes/finish_screen/finish_screen.gd
+res://scenes/Sprite2D2.gd
+res://scenes/game/game.gd
+res://scenes/story/story.tscn
+res://scenes/start_screen/start_screen.gd
+res://scenes/story/story.gd

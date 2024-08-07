@@ -1,0 +1,89 @@
+[gd_scene load_steps=10 format=3 uid="uid://bxkbj1whglva0"]
+
+[ext_resource type="Script" path="res://scenes/Group.gd" id="1_5llg1"]
+[ext_resource type="Texture2D" uid="uid://drag1vjwp7xhg" path="res://assets/kreise/orangemittee.png" id="2_35roe"]
+[ext_resource type="Texture2D" uid="uid://byt1hmbynl1pw" path="res://assets/kreise/gelbmittanzen.png" id="3_k16m4"]
+[ext_resource type="Texture2D" uid="uid://mmq5jmgmh088" path="res://assets/kreise/blaumittempel.png" id="4_h6kio"]
+[ext_resource type="Texture2D" uid="uid://bckuuwlb7fvn" path="res://assets/kreise/JCGB-green_S_pillShaped_btn.png" id="6_2cmul"]
+[ext_resource type="Texture2D" uid="uid://de3ll38twf7vt" path="res://assets/kreise/süden.png" id="6_858ri"]
+[ext_resource type="Texture2D" uid="uid://ddhs42b7pkqnh" path="res://assets/kreise/purplemitschere.png" id="6_juhau"]
+[ext_resource type="Script" path="res://scenes/Sprite2D2.gd" id="8_amyyx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nnyce"]
+radius = 58.0345
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Group" type="RigidBody2D" parent="."]
+position = Vector2(403, 747)
+script = ExtResource("1_5llg1")
+
+[node name="GroupCircle" type="CollisionShape2D" parent="Group"]
+position = Vector2(1, -5)
+shape = SubResource("CircleShape2D_nnyce")
+
+[node name="Sprite2D" type="Sprite2D" parent="Group"]
+position = Vector2(1, 0)
+texture = ExtResource("2_35roe")
+
+[node name="Group2" type="RigidBody2D" parent="."]
+position = Vector2(344, 867)
+script = ExtResource("1_5llg1")
+
+[node name="GroupCircle" type="CollisionShape2D" parent="Group2"]
+position = Vector2(6, -3)
+shape = SubResource("CircleShape2D_nnyce")
+
+[node name="Sprite2D" type="Sprite2D" parent="Group2"]
+position = Vector2(6, 1)
+texture = ExtResource("3_k16m4")
+
+[node name="Group3" type="RigidBody2D" parent="."]
+position = Vector2(268, 752)
+script = ExtResource("1_5llg1")
+
+[node name="GroupCircle" type="CollisionShape2D" parent="Group3"]
+position = Vector2(3, 0)
+shape = SubResource("CircleShape2D_nnyce")
+
+[node name="Sprite2D" type="Sprite2D" parent="Group3"]
+position = Vector2(3, 2)
+texture = ExtResource("4_h6kio")
+
+[node name="Group4" type="RigidBody2D" parent="."]
+position = Vector2(196, 875)
+mass = 437.21
+script = ExtResource("1_5llg1")
+
+[node name="GroupCircle" type="CollisionShape2D" parent="Group4"]
+position = Vector2(-2, -1)
+shape = SubResource("CircleShape2D_nnyce")
+
+[node name="Sprite2D" type="Sprite2D" parent="Group4"]
+position = Vector2(0, 2)
+texture = ExtResource("6_2cmul")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Group4"]
+position = Vector2(7, 5)
+texture = ExtResource("6_858ri")
+script = ExtResource("8_amyyx")
+
+[node name="Group5" type="RigidBody2D" parent="."]
+position = Vector2(156, 747)
+script = ExtResource("1_5llg1")
+
+[node name="GroupCircle" type="CollisionShape2D" parent="Group5"]
+position = Vector2(-9, -5)
+shape = SubResource("CircleShape2D_nnyce")
+
+[node name="Sprite2D" type="Sprite2D" parent="Group5"]
+position = Vector2(-10, -1)
+texture = ExtResource("6_juhau")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-20, -12)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(11.8983, 0)
+scale = Vector2(1.04111, 1)
+polygon = PackedVector2Array(533, 1013, 530, 1018, 528.378, 537, 381.421, 954, 158.582, 950, -2.78383, 551, 2, 1079, 532, 1082)

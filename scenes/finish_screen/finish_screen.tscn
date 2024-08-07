@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3 uid="uid://cp3los1ryub4m"]
+
+[ext_resource type="Script" path="res://scenes/finish_screen/finish_screen.gd" id="1_lcl1m"]
+[ext_resource type="AudioStream" uid="uid://0n5tsbr6vqrf" path="res://assets/efarm-soundtrack.ogg" id="2_bu4ro"]
+[ext_resource type="AudioStream" uid="uid://bgrkp8gx13qyq" path="res://assets/success.ogg" id="3_n852o"]
+[ext_resource type="FontFile" uid="uid://c1ymcbxgr5wbw" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="4_i4me8"]
+
+[node name="FinishScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lcl1m")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.313726, 0.313726, 0.313726, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 36.0
+offset_top = 73.0
+offset_right = -44.0
+offset_bottom = -101.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+text = "Du hast das Spiel beendet.
+
+"
+fit_content = true
+
+[node name="EngagementEvalLabel" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+fit_content = true
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+text = "Bist du zufrieden mit dir?"
+fit_content = true
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+fit_content = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_bu4ro")
+volume_db = -5.0
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_n852o")
+autoplay = true
+
+[node name="Button2" type="Button" parent="."]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -129.0
+offset_right = 150.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_i4me8")
+theme_override_font_sizes/font_size = 40
+text = "Neustart"
+
+[connection signal="pressed" from="Button2" to="." method="_on_button_pressed"]

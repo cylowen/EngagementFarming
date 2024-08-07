@@ -1,8 +1,11 @@
-RichTextLabel
-HBoxContainer
 Label
-TextEdit
-ColorRect
-Button
-TextureButton
 VBoxContainer
+TextureRect
+ColorRect
+Sprite2D
+AudioStreamPlayer
+RichTextLabel
+TextureButton
+Button
+HBoxContainer
+TextEdit

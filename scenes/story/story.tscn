@@ -1,0 +1,87 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6xm7mv81pv6t"]
+
+[ext_resource type="AudioStream" uid="uid://0n5tsbr6vqrf" path="res://assets/efarm-soundtrack.ogg" id="1_02xv6"]
+[ext_resource type="Script" path="res://scenes/story/story.gd" id="1_sgwxc"]
+[ext_resource type="AudioStream" uid="uid://bgrkp8gx13qyq" path="res://assets/success.ogg" id="2_ful6k"]
+[ext_resource type="FontFile" uid="uid://c1ymcbxgr5wbw" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="3_chg36"]
+
+[node name="Story" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sgwxc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.313726, 0.313726, 0.313726, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 36.0
+offset_top = 44.0
+offset_right = -52.0
+offset_bottom = -153.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Es war einmal eine Welt, die der unseren sehr ähnlich war. Und dann auch wieder ganz anders.
+
+Die Mehrheit der Menschen in dieser Welt trinkt Kaffee. Jede Person braucht Kaffee, um zu überleben. Und doch gibt es einige, die Tee bevorzugen. Hatten sie bis auf vor wenigen Jahren das Teetrinken auf wenige, geheime Teehäuser beschränkt, so trinken sie heute Tee in aller Öffentlichkeit. Heftige Proteste der Teetrinkenden hatten dazu geführt, dass Teetrinken nicht länger als illegal gilt. Manche Kaffeetrinkenden fühlen sich von diesem neuen Selbstbewusstsein der Teetrinkenden bedroht. Und dann gibt es auch noch die Menschen, die weder Kaffee noch Tee trinken wollen. Das wird mir jetzt zu kompliziert.
+
+
+Die Freizeit der meisten steht ganz im Zeichen des Tanzes. Es wird so gut wie immer getanzt, sei es, um Feiertage zu begehen oder einfach zum Sonnenuntergang. Einige wenige können dies jedoch nicht, da ihnen das Gefühl für den Rhythmus fehlt. Diese Menschen haben meist ein sehr trauriges Leben, das sie am besten unter sich fristen, denn wer möchte schon mit einer Person befreundet sein, die nicht tanzen kann? Seit einigen Jahren fordern sie so seltsame Dinge wie die Integration in normale Schulen. Aber wie sollen die rhythmuslosen Kinder denn mit anderen Mathe lernen, wenn sie nicht einmal Tanzen können?
+
+
+Kurze Haare zeigen einen starken, lange Haare einen zarten Charakter. Medizinisch gesehen führen kurze Haare zu mehr Autorität aber auch einer weit verbreiteten Unfähigkeit, mit Gefühlen umzugehen. Dafür sind die langhaarigen zarten Wesen da, die mit ihrem Charme alle verzaubern. Das war schon immer so. Seit Neuestem tragen manche ihre Haare mittellang. Davon wird die Gesellschaft untergehen. Sollen Haare jetzt abgeschafft werden?
+
+
+Im Norden Deutschlands ist die Wirtschaft stark, in Süddeutschland feiern sie lieber anstatt zu arbeiten. Deswegen ist der Norden reicher. Vor 70 Jahren hatte Norddeutschland Süddeutschland besetzt und sämtliche Ressourcen und Wertgegenstände nach Norddeutschland gebracht. Das hat mit der aktuellen Situation natürlich nichts zu tun. Die Unterschiede im Einkommen liegen ganz klar an der Kultur der Süddeutschen.
+
+Es ist dein Traum, auf Social Media bekannt zu werden. Du hast kurze Haare, bist aus Norddeutschland, trinkst gerne Kaffee und tanzt sogar Turniere.
+
+Was möchtest du posten? Du kannst immer einen von 3 Posts auswählen.
+"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_02xv6")
+volume_db = -5.0
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ful6k")
+autoplay = true
+
+[node name="Button2" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -106.0
+offset_top = -107.0
+offset_right = 106.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_chg36")
+theme_override_font_sizes/font_size = 20
+text = "Weiter"
+
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

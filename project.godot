@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="EngagementFarming"
-run/main_scene="res://scenes/game/game.tscn"
+run/main_scene="res://scenes/start_screen/start_screen.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameState="*res://singletons/game_state.gd"
 
 [display]
 

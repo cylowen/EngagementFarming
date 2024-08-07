@@ -14,9 +14,6 @@ func _ready():
 			print("originalradius" + str(originalRadius))
 	print("workd")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 #verändert die size multiplikativ im format x*1.05
 func setSize(newRelSize):

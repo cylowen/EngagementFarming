@@ -1,11 +1,11 @@
+Label
+VBoxContainer
+TextureRect
+ColorRect
 Sprite2D
 AudioStreamPlayer
 RichTextLabel
-VBoxContainer
 TextureButton
 Button
-ColorRect
-TextureRect
 HBoxContainer
-Label
 TextEdit

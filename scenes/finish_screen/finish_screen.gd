@@ -5,7 +5,6 @@ extends Control
 @onready var engagement_eval_label: RichTextLabel = $VBoxContainer/EngagementEvalLabel
 
 
-
 const GROUP_STRENGTH_TEXT5 = "Du hattest keinen Einfluss auf die "
 
 
@@ -21,7 +20,7 @@ func _ready() -> void:
 	if GameState.rage_level < -5:
 		engagement_eval_label.text += "Du hast mit deinen Posts die Welt ein bisschen weniger wütend gemacht."
 	elif -5 < GameState.rage_level && GameState.rage_level < 5:
-		engagement_eval_label.text += "Du hast kaum Hass verbreitet."
+		engagement_eval_label.text += "Du hast keinen / kaum Hass verbreitet."
 	else:
 		engagement_eval_label.text += "Du hast es in Kauf genommen, Diskriminierungen zu reproduzieren und Hass zu verbreiten."
 	
@@ -68,4 +67,5 @@ func _ready() -> void:
 		rich_text_label.text += GROUP_STRENGTH_TEXT5 + "Community der Nichttänzer*innen. "
 
 func _on_button_pressed() -> void:
+	GameState.reset_game_state()
 	get_tree().change_scene_to_file("res://scenes/start_screen/start_screen.tscn")

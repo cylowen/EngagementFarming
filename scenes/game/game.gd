@@ -26,8 +26,6 @@ var news_json_result
 
 @onready var audio_stream_player_2: AudioStreamPlayer = $AudioStreamPlayer2
 
-
-
 var number_of_news
 var current_news_id = 1
 
@@ -152,7 +150,6 @@ func next_news() -> void:
 	
 func finish_game() -> void:
 	print("game finished")
-	GameState.reset_game_state()
 	get_tree().change_scene_to_file("res://scenes/finish_screen/finish_screen.tscn")
 	
 func evaluate_group_strengths(number_of_post) -> void:

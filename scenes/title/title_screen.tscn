@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://m7fbh3dutgl1"]
 
-[ext_resource type="AudioStream" path="res://assets/efarm-soundtrack.ogg" id="1_60xqd"]
+[ext_resource type="AudioStream" uid="uid://0n5tsbr6vqrf" path="res://assets/efarm-soundtrack.ogg" id="1_60xqd"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
